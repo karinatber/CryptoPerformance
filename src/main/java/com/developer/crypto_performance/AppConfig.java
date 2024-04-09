@@ -14,22 +14,22 @@ import com.developer.crypto_performance.tasks.CryptoPerformanceTaskManager;
 public class AppConfig {
 
   @Bean
-  public CsvReaderService csvReaderService() {
+  CsvReaderService csvReaderService() {
     return CsvReaderService.builder().build();
-  };
-
+  }
+  
   @Bean
-  public ApiRequestHelper apiRequestHelper() {
+  ApiRequestHelper apiRequestHelper() {
     return ApiRequestHelper.builder().baseUrl(BASE_API_URL).build();
   }
-
+  
   @Bean
-  public CryptoPerformanceTaskManager cryptoPerformanceTaskManager() {
+  CryptoPerformanceTaskManager cryptoPerformanceTaskManager() {
     return new CryptoPerformanceTaskManager();
   }
-
+  
   @Bean
-  public PerformanceService performanceService() {
+  PerformanceService performanceService() {
     return new PerformanceService();
   }
 
